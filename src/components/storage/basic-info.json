@@ -1,0 +1,70 @@
+{
+  "collectionName": "components_storage_basic_infos",
+  "info": {
+    "displayName": "Basic Information",
+    "icon": "info-circle",
+    "description": "存储设备基本信息"
+  },
+  "options": {},
+  "attributes": {
+    "capacity": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "description": "容量(GB)"
+    },
+    "form_factor": {
+      "type": "enumeration",
+      "enum": [
+        "M2_2280",
+        "M2_2260",
+        "M2_2242",
+        "M2_22110",
+        "SATA_2.5",
+        "SATA_3.5"
+      ],
+      "required": true,
+      "description": "规格尺寸"
+    },
+    "interface": {
+      "type": "enumeration",
+      "enum": [
+        "PCIe_4.0_x4",
+        "PCIe_3.0_x4",
+        "SATA_III",
+        "SATA_II"
+      ],
+      "required": true,
+      "description": "接口类型"
+    },
+    "nand_type": {
+      "type": "enumeration",
+      "enum": [
+        "SLC",
+        "MLC",
+        "TLC",
+        "QLC",
+        "PLC",
+        "None"
+      ],
+      "required": true,
+      "description": "闪存类型"
+    },
+    "controller": {
+      "type": "string",
+      "required": true,
+      "description": "主控型号"
+    },
+    "dram_cache": {
+      "type": "component",
+      "component": "storage.cache-config",
+      "required": true,
+      "description": "DRAM缓存配置"
+    },
+    "hmb_support": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否支持主机内存缓冲(HMB)"
+    }
+  }
+} 

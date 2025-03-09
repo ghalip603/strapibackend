@@ -1,0 +1,127 @@
+{
+  "kind": "collectionType",
+  "collectionName": "power_supplies",
+  "info": {
+    "singularName": "power-supply",
+    "pluralName": "power-supplies",
+    "displayName": "power-supply",
+    "description": "电源供应器信息"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "电源名称"
+    },
+    "model": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "电源型号"
+    },
+    "brand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::brand.brand",
+      "inversedBy": "powerSupplies"
+    },
+    "outputSpecs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "power-supply.output-specs",
+      "required": true
+    },
+    "efficiencyCertification": {
+      "type": "component",
+      "repeatable": false,
+      "component": "power-supply.efficiency-certification",
+      "required": true
+    },
+    "connectorSpecs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "power-supply.connector-specs",
+      "required": true
+    },
+    "protectionFeatures": {
+      "type": "component",
+      "repeatable": false,
+      "component": "power-supply.protection-features"
+    },
+    "coolingSpecs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "power-supply.cooling-specs"
+    },
+    "physicalSpecs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "power-supply.physical-specs",
+      "required": true
+    },
+    "inputVoltage": {
+      "type": "enumeration",
+      "enum": [
+        "oneHundredToTwoFortyV",
+        "oneHundredToOneHundredTwentyV",
+        "twoTwentyToTwoFortyV",
+        "autoRanging"
+      ],
+      "required": true,
+      "description": "输入电压范围"
+    },
+    "mtbf": {
+      "type": "integer",
+      "min": 0,
+      "description": "平均无故障工作时间(小时)"
+    },
+    "warranty": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.warranty-info"
+    },
+    "releaseDate": {
+      "type": "date",
+      "description": "发布日期"
+    },
+    "price": {
+      "type": "decimal",
+      "min": 0,
+      "description": "价格"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "inStock",
+        "discontinued",
+        "comingSoon"
+      ],
+      "default": "inStock",
+      "required": true,
+      "description": "产品状态"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ],
+      "description": "产品图片"
+    },
+    "description": {
+      "type": "richtext",
+      "description": "产品描述"
+    },
+    "compatibleWith": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::case.case",
+      "inversedBy": "compatiblePowerSupplies"
+    }
+  }
+}

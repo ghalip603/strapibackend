@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_slots_pcie_slots",
+  "info": {
+    "displayName": "PCIe Slot",
+    "icon": "expand",
+    "description": "PCIe插槽详细规格"
+  },
+  "options": {},
+  "attributes": {
+    "generation": {
+      "type": "enumeration",
+      "enum": [
+        "PCIe_3_0",
+        "PCIe_4_0",
+        "PCIe_5_0"
+      ],
+      "required": true,
+      "description": "PCIe版本"
+    },
+    "lanes": {
+      "type": "enumeration",
+      "enum": [
+        "x1",
+        "x4",
+        "x8",
+        "x16"
+      ],
+      "required": true,
+      "description": "通道数"
+    },
+    "physical_size": {
+      "type": "enumeration",
+      "enum": [
+        "x16",
+        "x8",
+        "x4",
+        "x1"
+      ],
+      "required": true,
+      "description": "物理大小"
+    },
+    "shared_bandwidth": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否共享带宽"
+    },
+    "reinforced": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否带有加固"
+    }
+  }
+} 

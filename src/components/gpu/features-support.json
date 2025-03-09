@@ -1,0 +1,83 @@
+{
+  "collectionName": "components_gpu_features_support",
+  "info": {
+    "displayName": "特性与支持",
+    "description": "GPU特性与技术支持"
+  },
+  "options": {},
+  "attributes": {
+    "directX": {
+      "type": "enumeration",
+      "enum": [
+        "DirectXEleven",
+        "DirectXTwelve",
+        "DirectXTwelveUltimate"
+      ],
+      "required": true,
+      "description": "DirectX支持版本"
+    },
+    "openGL": {
+      "type": "string",
+      "required": true,
+      "description": "OpenGL支持版本"
+    },
+    "vulkan": {
+      "type": "string",
+      "required": true,
+      "description": "Vulkan支持版本"
+    },
+    "rayTracing": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否支持光线追踪"
+    },
+    "dlss": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否支持DLSS (NVIDIA专用)"
+    },
+    "dlssVersion": {
+      "type": "enumeration",
+      "enum": [
+        "DLSSonePointZero",
+        "DLSStwoPointZero",
+        "DLSSthreePointZero",
+        "DLSSthreePointFive"
+      ],
+      "description": "DLSS版本 (NVIDIA专用)"
+    },
+    "fsr": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否支持FSR (AMD专用)"
+    },
+    "fsrVersion": {
+      "type": "enumeration",
+      "enum": [
+        "FSRonePointZero",
+        "FSRtwoPointZero",
+        "FSRthreePointZero"
+      ],
+      "description": "FSR版本 (AMD专用)"
+    },
+    "vrReady": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否支持VR"
+    },
+    "multiGpuSupport": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否支持多GPU"
+    },
+    "multiGpuTechnology": {
+      "type": "enumeration",
+      "enum": [
+        "SLI",
+        "NVLink",
+        "CrossFire"
+      ],
+      "description": "多GPU技术"
+    }
+  }
+}

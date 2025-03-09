@@ -1,0 +1,56 @@
+{
+  "collectionName": "components_specs_power_designs",
+  "info": {
+    "displayName": "Power Design",
+    "icon": "bolt",
+    "description": "主板供电设计规格"
+  },
+  "options": {},
+  "attributes": {
+    "cpu_power_phases": {
+      "type": "string",
+      "required": true,
+      "description": "CPU供电相数"
+    },
+    "vcore_phases": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "description": "核心电压供电相数"
+    },
+    "soc_phases": {
+      "type": "integer",
+      "min": 0,
+      "description": "SOC供电相数"
+    },
+    "memory_phases": {
+      "type": "integer",
+      "min": 0,
+      "description": "内存供电相数"
+    },
+    "power_connectors": {
+      "type": "component",
+      "component": "power.power-connectors",
+      "required": true,
+      "description": "电源接口"
+    },
+    "vrm_cooling": {
+      "type": "boolean",
+      "default": true,
+      "description": "是否有VRM散热片"
+    },
+    "digital_pwm": {
+      "type": "boolean",
+      "default": true,
+      "description": "是否使用数字供电"
+    },
+    "power_stages": {
+      "type": "string",
+      "description": "供电管型号"
+    },
+    "additional_features": {
+      "type": "json",
+      "description": "其他供电特性"
+    }
+  }
+} 

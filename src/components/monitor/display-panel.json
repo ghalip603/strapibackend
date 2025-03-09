@@ -1,0 +1,147 @@
+{
+  "collectionName": "components_monitor_display_panels",
+  "info": {
+    "displayName": "显示面板规格",
+    "description": "显示器面板的基本规格信息"
+  },
+  "options": {},
+  "attributes": {
+    "panelType": {
+      "type": "enumeration",
+      "enum": [
+        "ips",
+        "va",
+        "tn",
+        "oled",
+        "qled",
+        "miniLed",
+        "microLed",
+        "pls",
+        "ahva"
+      ],
+      "required": true,
+      "description": "面板类型"
+    },
+    "resolution": {
+      "type": "enumeration",
+      "enum": [
+        "hd",
+        "fhd",
+        "wuxga",
+        "qhd",
+        "wqhd",
+        "uwqhd",
+        "fourK",
+        "fiveK",
+        "eightK",
+        "custom"
+      ],
+      "required": true,
+      "description": "分辨率"
+    },
+    "customResolution": {
+      "type": "string",
+      "description": "自定义分辨率(宽x高)"
+    },
+    "aspectRatio": {
+      "type": "enumeration",
+      "enum": [
+        "fourThree",
+        "sixteenNine",
+        "sixteenTen",
+        "twentyOneNine",
+        "thirtyTwoNine",
+        "other"
+      ],
+      "description": "屏幕比例"
+    },
+    "refreshRate": {
+      "type": "integer",
+      "min": 0,
+      "required": true,
+      "description": "刷新率(Hz)"
+    },
+    "responseTime": {
+      "type": "decimal",
+      "min": 0,
+      "description": "响应时间(ms)"
+    },
+    "brightness": {
+      "type": "integer",
+      "min": 0,
+      "description": "亮度(cd/m²)"
+    },
+    "contrastRatio": {
+      "type": "string",
+      "description": "对比度"
+    },
+    "viewingAngle": {
+      "type": "string",
+      "description": "可视角度(水平/垂直)"
+    },
+    "pixelDensity": {
+      "type": "integer",
+      "min": 0,
+      "description": "像素密度(PPI)"
+    },
+    "pixelPitch": {
+      "type": "decimal",
+      "min": 0,
+      "description": "像素间距(mm)"
+    },
+    "backlightType": {
+      "type": "enumeration",
+      "enum": [
+        "wLed",
+        "rgbLed",
+        "miniLed",
+        "none"
+      ],
+      "description": "背光类型"
+    },
+    "adaptiveSync": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "freesync",
+        "freesyncPremium",
+        "freesyncPremiumPro",
+        "gsync",
+        "gsyncCompatible",
+        "gsyncUltimate",
+        "vrr"
+      ],
+      "description": "自适应同步技术"
+    },
+    "mbrTechnology": {
+      "type": "boolean",
+      "default": false,
+      "description": "动态模糊减少技术"
+    },
+    "lowBlueLight": {
+      "type": "boolean",
+      "default": false,
+      "description": "低蓝光模式"
+    },
+    "flickerFree": {
+      "type": "boolean",
+      "default": false,
+      "description": "无闪烁技术"
+    },
+    "curvedScreen": {
+      "type": "boolean",
+      "default": false,
+      "description": "曲面屏幕"
+    },
+    "curvatureRadius": {
+      "type": "integer",
+      "min": 0,
+      "description": "曲率半径(R)"
+    },
+    "touchscreen": {
+      "type": "boolean",
+      "default": false,
+      "description": "触摸屏支持"
+    }
+  }
+}

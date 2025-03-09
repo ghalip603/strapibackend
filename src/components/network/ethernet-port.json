@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_network_ethernet_ports",
+  "info": {
+    "displayName": "Ethernet Port",
+    "icon": "ethernet",
+    "description": "以太网端口规格"
+  },
+  "options": {},
+  "attributes": {
+    "speed": {
+      "type": "enumeration",
+      "enum": [
+        "10_Gbps",
+        "5_Gbps",
+        "2.5_Gbps",
+        "1_Gbps"
+      ],
+      "required": true
+    },
+    "chip_model": {
+      "type": "string",
+      "description": "网卡芯片型号"
+    },
+    "features": {
+      "type": "json",
+      "description": "特殊功能，如游戏优先级等"
+    }
+  }
+} 

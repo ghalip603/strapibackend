@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_storage_power_specs",
+  "info": {
+    "displayName": "Power Specifications",
+    "icon": "bolt",
+    "description": "功耗规格"
+  },
+  "options": {},
+  "attributes": {
+    "idle": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "description": "待机功耗(W)"
+    },
+    "average": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "description": "平均功耗(W)"
+    },
+    "max": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "description": "最大功耗(W)"
+    }
+  }
+} 

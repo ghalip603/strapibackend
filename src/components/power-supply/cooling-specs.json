@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_power_supply_cooling_specs",
+  "info": {
+    "displayName": "散热规格",
+    "description": "电源散热规格信息"
+  },
+  "options": {},
+  "attributes": {
+    "fanSize": {
+      "type": "integer",
+      "min": 0,
+      "description": "风扇尺寸(mm)"
+    },
+    "fanType": {
+      "type": "enumeration",
+      "enum": [
+        "hydraulicBearing",
+        "ballBearing",
+        "sleeveBearing",
+        "fluidDynamicBearing",
+        "magneticLevitation",
+        "fanless"
+      ],
+      "description": "风扇轴承类型"
+    },
+    "fanSpeed": {
+      "type": "string",
+      "description": "风扇转速范围(RPM)"
+    },
+    "noiseLevel": {
+      "type": "string",
+      "description": "噪音水平(dB)"
+    },
+    "smartFan": {
+      "type": "boolean",
+      "default": false,
+      "description": "智能风扇控制"
+    },
+    "fanlessMode": {
+      "type": "boolean",
+      "default": false,
+      "description": "支持无风扇模式"
+    }
+  }
+}

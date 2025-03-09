@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_ports_type_c_features",
+  "info": {
+    "displayName": "Type-C Features",
+    "icon": "usb",
+    "description": "Type-C接口特性"
+  },
+  "options": {},
+  "attributes": {
+    "power_delivery": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否支持USB Power Delivery"
+    },
+    "max_power_output": {
+      "type": "integer",
+      "min": 0,
+      "description": "最大供电功率(W)"
+    },
+    "display_port": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否支持DisplayPort Alt Mode"
+    },
+    "thunderbolt": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Thunderbolt_3",
+        "Thunderbolt_4"
+      ],
+      "default": "None",
+      "description": "雷电支持"
+    }
+  }
+} 

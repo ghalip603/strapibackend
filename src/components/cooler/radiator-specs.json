@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_cooler_radiator_specs",
+  "info": {
+    "displayName": "散热排规格",
+    "description": "水冷散热器散热排规格信息"
+  },
+  "options": {},
+  "attributes": {
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "onetwenty",
+        "oneforty",
+        "twofourty",
+        "threesixty",
+        "fourhundredtwenty",
+        "fourhundredeighty"
+      ],
+      "required": true,
+      "description": "散热排尺寸(mm)"
+    },
+    "thickness": {
+      "type": "integer",
+      "min": 0,
+      "description": "散热排厚度(mm)"
+    },
+    "material": {
+      "type": "enumeration",
+      "enum": [
+        "aluminum",
+        "copper",
+        "aluminumAndCopper"
+      ],
+      "description": "散热排材质"
+    },
+    "finDensity": {
+      "type": "integer",
+      "min": 0,
+      "description": "鳍片密度(FPI)"
+    }
+  }
+}

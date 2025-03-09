@@ -1,0 +1,56 @@
+{
+  "collectionName": "components_cooler_heatsink_specs",
+  "info": {
+    "displayName": "散热片规格",
+    "description": "散热器散热片规格信息"
+  },
+  "options": {},
+  "attributes": {
+    "material": {
+      "type": "enumeration",
+      "enum": [
+        "aluminum",
+        "copper",
+        "aluminumAndCopper",
+        "nickelPlated"
+      ],
+      "required": true,
+      "description": "散热片材质"
+    },
+    "heatpipes": {
+      "type": "integer",
+      "min": 0,
+      "description": "热管数量"
+    },
+    "heatpipeDiameter": {
+      "type": "decimal",
+      "min": 0,
+      "description": "热管直径(mm)"
+    },
+    "finCount": {
+      "type": "integer",
+      "min": 0,
+      "description": "散热鳍片数量"
+    },
+    "finThickness": {
+      "type": "decimal",
+      "min": 0,
+      "description": "散热鳍片厚度(mm)"
+    },
+    "surfaceArea": {
+      "type": "decimal",
+      "min": 0,
+      "description": "散热面积(cm²)"
+    },
+    "surfaceTreatment": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "nickelPlated",
+        "blackCoating",
+        "anodized"
+      ],
+      "description": "表面处理工艺"
+    }
+  }
+}

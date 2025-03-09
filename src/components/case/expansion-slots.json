@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_case_expansion_slots",
+  "info": {
+    "displayName": "扩展槽位",
+    "description": "机箱扩展槽位信息"
+  },
+  "options": {},
+  "attributes": {
+    "pciSlots": {
+      "type": "integer",
+      "min": 0,
+      "required": true,
+      "description": "PCI扩展槽数量"
+    },
+    "externalThreePointFiveBays": {
+      "type": "integer",
+      "min": 0,
+      "description": "外置3.5英寸托架数量"
+    },
+    "internalThreePointFiveBays": {
+      "type": "integer",
+      "min": 0,
+      "description": "内置3.5英寸托架数量"
+    },
+    "externalTwoPointFiveBays": {
+      "type": "integer",
+      "min": 0,
+      "description": "外置2.5英寸托架数量"
+    },
+    "internalTwoPointFiveBays": {
+      "type": "integer",
+      "min": 0,
+      "description": "内置2.5英寸托架数量"
+    },
+    "verticalGpuMount": {
+      "type": "boolean",
+      "default": false,
+      "description": "支持垂直显卡安装"
+    }
+  }
+}

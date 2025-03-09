@@ -1,0 +1,60 @@
+{
+  "collectionName": "components_monitor_power_specs",
+  "info": {
+    "displayName": "电源规格",
+    "description": "显示器电源和功耗规格"
+  },
+  "options": {},
+  "attributes": {
+    "powerConsumption": {
+      "type": "decimal",
+      "min": 0,
+      "description": "典型功耗(W)"
+    },
+    "maxPowerConsumption": {
+      "type": "decimal",
+      "min": 0,
+      "description": "最大功耗(W)"
+    },
+    "standbyPower": {
+      "type": "decimal",
+      "min": 0,
+      "description": "待机功耗(W)"
+    },
+    "powerSupply": {
+      "type": "enumeration",
+      "enum": [
+        "internal",
+        "external"
+      ],
+      "description": "电源类型"
+    },
+    "powerSupplyRating": {
+      "type": "decimal",
+      "min": 0,
+      "description": "电源额定功率(W)"
+    },
+    "energyStar": {
+      "type": "boolean",
+      "default": false,
+      "description": "能源之星认证"
+    },
+    "energyEfficiencyClass": {
+      "type": "string",
+      "description": "能效等级"
+    },
+    "voltageRange": {
+      "type": "string",
+      "description": "输入电压范围"
+    },
+    "frequencyRange": {
+      "type": "string",
+      "description": "输入频率范围"
+    },
+    "powerSavingModes": {
+      "type": "boolean",
+      "default": false,
+      "description": "节能模式"
+    }
+  }
+}

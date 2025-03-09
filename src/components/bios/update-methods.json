@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_bios_update_methods",
+  "info": {
+    "displayName": "BIOS Update Methods",
+    "icon": "upload",
+    "description": "BIOS更新方式"
+  },
+  "options": {},
+  "attributes": {
+    "usb_flashback": {
+      "type": "boolean",
+      "default": false,
+      "description": "USB BIOS Flashback支持"
+    },
+    "internet_flash": {
+      "type": "boolean",
+      "default": false,
+      "description": "网络更新支持"
+    },
+    "windows_utility": {
+      "type": "boolean",
+      "default": true,
+      "description": "Windows工具更新支持"
+    },
+    "dual_bios": {
+      "type": "boolean",
+      "default": false,
+      "description": "双BIOS芯片"
+    },
+    "bios_rollback": {
+      "type": "boolean",
+      "default": false,
+      "description": "BIOS回滚支持"
+    },
+    "cpu_less_update": {
+      "type": "boolean",
+      "default": false,
+      "description": "无CPU更新支持"
+    }
+  }
+} 

@@ -1,0 +1,140 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coolers",
+  "info": {
+    "singularName": "cooler",
+    "pluralName": "coolers",
+    "displayName": "cooler",
+    "description": "CPU散热器信息"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "散热器名称"
+    },
+    "model": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "散热器型号"
+    },
+    "brand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::brand.brand",
+      "inversedBy": "coolers"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "airCooler",
+        "aio",
+        "customLoop",
+        "passiveCooler",
+        "hybridCooler"
+      ],
+      "required": true,
+      "description": "散热器类型"
+    },
+    "fanSpecs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cooler.fan-specs"
+    },
+    "heatsinkSpecs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cooler.heatsink-specs"
+    },
+    "radiatorSpecs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cooler.radiator-specs"
+    },
+    "pumpSpecs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cooler.pump-specs"
+    },
+    "mountingSpecs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cooler.mounting-specs",
+      "required": true
+    },
+    "thermalPerformance": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cooler.thermal-performance",
+      "required": true
+    },
+    "tubingLength": {
+      "type": "integer",
+      "min": 0,
+      "description": "水管长度(mm)"
+    },
+    "coolant": {
+      "type": "string",
+      "description": "冷却液类型"
+    },
+    "coolantCapacity": {
+      "type": "decimal",
+      "min": 0,
+      "description": "冷却液容量(ml)"
+    },
+    "refillable": {
+      "type": "boolean",
+      "default": false,
+      "description": "可补充冷却液"
+    },
+    "warranty": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.warranty-info"
+    },
+    "releaseDate": {
+      "type": "date",
+      "description": "发布日期"
+    },
+    "price": {
+      "type": "decimal",
+      "min": 0,
+      "description": "价格"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "inStock",
+        "discontinued",
+        "comingSoon"
+      ],
+      "default": "inStock",
+      "required": true,
+      "description": "产品状态"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ],
+      "description": "产品图片"
+    },
+    "description": {
+      "type": "richtext",
+      "description": "产品描述"
+    },
+    "compatibleWith": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::cpu.cpu",
+      "inversedBy": "compatibleCoolers"
+    }
+  }
+}

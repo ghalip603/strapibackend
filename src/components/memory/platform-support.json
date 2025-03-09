@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_memory_platform_supports",
+  "info": {
+    "displayName": "Platform Support",
+    "icon": "microchip",
+    "description": "处理器平台支持"
+  },
+  "options": {},
+  "attributes": {
+    "supported_generations": {
+      "type": "json",
+      "required": true,
+      "description": "支持的处理器代数"
+    },
+    "supported_chipsets": {
+      "type": "json",
+      "required": true,
+      "description": "支持的芯片组"
+    },
+    "max_supported_frequency": {
+      "type": "integer",
+      "required": true,
+      "description": "平台最大支持频率(MHz)"
+    },
+    "notes": {
+      "type": "text",
+      "description": "兼容性注意事项"
+    }
+  }
+} 

@@ -1,0 +1,72 @@
+{
+  "collectionName": "components_specs_memory_specifications",
+  "info": {
+    "displayName": "Memory Specification",
+    "icon": "memory",
+    "description": "主板内存规格配置"
+  },
+  "options": {},
+  "attributes": {
+    "memoryType": {
+      "type": "enumeration",
+      "enum": [
+        "DDR4",
+        "DDR5"
+      ],
+      "required": true
+    },
+    "maxMemorySize": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "max": 1024,
+      "description": "最大支持内存容量(GB)"
+    },
+    "memorySlots": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "max": 8,
+      "description": "内存插槽数量"
+    },
+    "maxMemorySpeed": {
+      "type": "enumeration",
+      "enum": [
+        "DDR4_2133",
+        "DDR4_2400",
+        "DDR4_2666",
+        "DDR4_2933",
+        "DDR4_3200",
+        "DDR4_3600",
+        "DDR4_4000",
+        "DDR4_4400",
+        "DDR5_4800",
+        "DDR5_5200",
+        "DDR5_5600",
+        "DDR5_6000",
+        "DDR5_6400",
+        "DDR5_7200",
+        "DDR5_7800"
+      ],
+      "required": true
+    },
+    "memoryChannels": {
+      "type": "enumeration",
+      "enum": [
+        "Dual_Channel",
+        "Quad_Channel"
+      ],
+      "required": true
+    },
+    "xmp_expo_support": {
+      "type": "boolean",
+      "default": true,
+      "description": "是否支持 XMP/EXPO 超频"
+    },
+    "ecc_support": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否支持 ECC 内存"
+    }
+  }
+} 

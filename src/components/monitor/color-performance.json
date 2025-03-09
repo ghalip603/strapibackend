@@ -1,0 +1,75 @@
+{
+  "collectionName": "components_monitor_color_performances",
+  "info": {
+    "displayName": "色彩表现",
+    "description": "显示器色彩表现相关规格"
+  },
+  "options": {},
+  "attributes": {
+    "colorGamut": {
+      "type": "json",
+      "description": "色域覆盖率(sRGB, Adobe RGB, DCI-P3, NTSC等)"
+    },
+    "colorDepth": {
+      "type": "enumeration",
+      "enum": [
+        "eightBit",
+        "tenBit",
+        "twelveBit"
+      ],
+      "description": "色深"
+    },
+    "colorBitDisplay": {
+      "type": "string",
+      "description": "色彩位数显示(如8位+FRC)"
+    },
+    "hdrSupport": {
+      "type": "boolean",
+      "default": false,
+      "description": "HDR支持"
+    },
+    "hdrStandard": {
+      "type": "enumeration",
+      "enum": [
+        "hdrTen",
+        "hdrTenPlus",
+        "hdrFourHundred",
+        "hdrSixHundred",
+        "hdrOneThousand",
+        "hdrOneThousandPlus",
+        "hdrTrueBlack",
+        "dolbyVision",
+        "hlg"
+      ],
+      "description": "HDR标准"
+    },
+    "localDimming": {
+      "type": "boolean",
+      "default": false,
+      "description": "局部调光"
+    },
+    "dimmingZones": {
+      "type": "integer",
+      "min": 0,
+      "description": "调光分区数量"
+    },
+    "factoryCalibrated": {
+      "type": "boolean",
+      "default": false,
+      "description": "出厂校色"
+    },
+    "deltaE": {
+      "type": "decimal",
+      "min": 0,
+      "description": "色彩精度(Delta E)"
+    },
+    "colorTemperature": {
+      "type": "string",
+      "description": "色温预设"
+    },
+    "gammaSupport": {
+      "type": "string",
+      "description": "伽马支持"
+    }
+  }
+}

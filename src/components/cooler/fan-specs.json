@@ -1,0 +1,72 @@
+{
+  "collectionName": "components_cooler_fan_specs",
+  "info": {
+    "displayName": "风扇规格",
+    "description": "散热器风扇规格信息"
+  },
+  "options": {},
+  "attributes": {
+    "fanSize": {
+      "type": "integer",
+      "min": 0,
+      "required": true,
+      "description": "风扇尺寸(mm)"
+    },
+    "fanCount": {
+      "type": "integer",
+      "min": 1,
+      "required": true,
+      "default": 1,
+      "description": "风扇数量"
+    },
+    "fanSpeed": {
+      "type": "string",
+      "description": "风扇转速范围(RPM)"
+    },
+    "airflow": {
+      "type": "decimal",
+      "min": 0,
+      "description": "风量(CFM)"
+    },
+    "staticPressure": {
+      "type": "decimal",
+      "min": 0,
+      "description": "静压(mmH2O)"
+    },
+    "noiseLevel": {
+      "type": "string",
+      "description": "噪音水平(dB)"
+    },
+    "bearingType": {
+      "type": "enumeration",
+      "enum": [
+        "hydraulicBearing",
+        "ballBearing",
+        "sleeveBearing",
+        "fluidDynamicBearing",
+        "magneticLevitation",
+        "twoballBearing"
+      ],
+      "description": "轴承类型"
+    },
+    "pwmSupport": {
+      "type": "boolean",
+      "default": false,
+      "description": "PWM调速支持"
+    },
+    "rgbLighting": {
+      "type": "boolean",
+      "default": false,
+      "description": "RGB灯效"
+    },
+    "fanConnector": {
+      "type": "enumeration",
+      "enum": [
+        "threePin",
+        "fourPin",
+        "proprietary"
+      ],
+      "description": "风扇接口类型"
+    }
+  }
+}

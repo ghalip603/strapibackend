@@ -1,0 +1,78 @@
+{
+  "collectionName": "components_memory_lighting_features",
+  "info": {
+    "displayName": "Lighting Features",
+    "icon": "lightbulb",
+    "description": "内存条RGB灯效功能"
+  },
+  "options": {},
+  "attributes": {
+    "rgb_type": {
+      "type": "enumeration",
+      "enum": [
+        "RGB",
+        "ARGB",
+        "None"
+      ],
+      "required": true,
+      "description": "RGB类型"
+    },
+    "led_count": {
+      "type": "integer",
+      "min": 0,
+      "description": "LED灯珠数量"
+    },
+    "lighting_zones": {
+      "type": "integer",
+      "min": 1,
+      "description": "灯效区域数量"
+    },
+    "software_support": {
+      "type": "json",
+      "required": true,
+      "description": "支持的RGB控制软件",
+      "ASUS": "Aura Sync",
+      "MSI": "Mystic Light",
+      "Gigabyte": "RGB Fusion 2.0",
+      "ASRock": "Polychrome Sync",
+      "Corsair": "iCUE",
+      "G.Skill": "Trident Z Lighting Control"
+    },
+    "default_effects": {
+      "type": "json",
+      "description": "预设灯效模式"
+    },
+    "sync_features": {
+      "type": "boolean",
+      "default": true,
+      "description": "是否支持同步控制"
+    },
+    "addressable": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否支持单独寻址"
+    },
+    "brightness_levels": {
+      "type": "integer",
+      "min": 0,
+      "description": "亮度调节级别"
+    },
+    "color_options": {
+      "type": "json",
+      "description": "颜色选项",
+      "rgb_spectrum": true,
+      "preset_colors": 16,
+      "custom_colors": true,
+      "max_custom_colors": 20
+    },
+    "additional_features": {
+      "type": "json",
+      "description": "其他灯效特性",
+      "music_sync": true,
+      "game_sync": true,
+      "temperature_sync": true,
+      "cross_platform_sync": true,
+      "macro_support": true
+    }
+  }
+} 

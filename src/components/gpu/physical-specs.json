@@ -1,0 +1,70 @@
+{
+  "collectionName": "components_gpu_physical_specs",
+  "info": {
+    "displayName": "物理规格",
+    "description": "GPU物理尺寸和规格信息"
+  },
+  "options": {},
+  "attributes": {
+    "length": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "description": "显卡长度(mm)"
+    },
+    "height": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "description": "显卡高度(mm)"
+    },
+    "width": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "description": "显卡厚度(mm)"
+    },
+    "slotSize": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "description": "占用PCIe插槽数量"
+    },
+    "weight": {
+      "type": "decimal",
+      "min": 0,
+      "description": "重量(g)"
+    },
+    "backplate": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否有背板"
+    },
+    "backplateMaterial": {
+      "type": "enumeration",
+      "enum": [
+        "aluminum",
+        "stainlessSteel",
+        "carbonFiber",
+        "plastic",
+        "other"
+      ],
+      "description": "背板材质"
+    },
+    "lighting": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否有RGB灯效"
+    },
+    "lightingControl": {
+      "type": "enumeration",
+      "enum": [
+        "softwareControl",
+        "hardwareControl",
+        "bothControls",
+        "noControl"
+      ],
+      "description": "灯效控制方式"
+    }
+  }
+}

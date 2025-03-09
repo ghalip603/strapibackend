@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_power_supply_protection_features",
+  "info": {
+    "displayName": "保护功能",
+    "description": "电源保护功能信息"
+  },
+  "options": {},
+  "attributes": {
+    "ovp": {
+      "type": "boolean",
+      "default": false,
+      "description": "过压保护(OVP)"
+    },
+    "uvp": {
+      "type": "boolean",
+      "default": false,
+      "description": "欠压保护(UVP)"
+    },
+    "ocp": {
+      "type": "boolean",
+      "default": false,
+      "description": "过流保护(OCP)"
+    },
+    "opp": {
+      "type": "boolean",
+      "default": false,
+      "description": "过功率保护(OPP)"
+    },
+    "otp": {
+      "type": "boolean",
+      "default": false,
+      "description": "过温保护(OTP)"
+    },
+    "scp": {
+      "type": "boolean",
+      "default": false,
+      "description": "短路保护(SCP)"
+    },
+    "nop": {
+      "type": "boolean",
+      "default": false,
+      "description": "无负载保护(NOP)"
+    },
+    "sip": {
+      "type": "boolean",
+      "default": false,
+      "description": "浪涌电流保护(SIP)"
+    }
+  }
+}

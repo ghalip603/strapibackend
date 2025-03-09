@@ -1,0 +1,137 @@
+{
+  "collectionName": "components_monitor_connectivities",
+  "info": {
+    "displayName": "接口规格",
+    "description": "显示器接口和连接规格"
+  },
+  "options": {},
+  "attributes": {
+    "hdmiPorts": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "description": "HDMI接口数量"
+    },
+    "hdmiVersion": {
+      "type": "enumeration",
+      "enum": [
+        "hdmiOnePointFour",
+        "hdmiTwoPointZero",
+        "hdmiTwoPointOne",
+        "hdmiTwoPointOneA"
+      ],
+      "description": "HDMI版本"
+    },
+    "displayPorts": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "description": "DisplayPort接口数量"
+    },
+    "displayPortVersion": {
+      "type": "enumeration",
+      "enum": [
+        "dpOnePointTwo",
+        "dpOnePointFour",
+        "dpTwoPointZero",
+        "dpTwoPointOne"
+      ],
+      "description": "DisplayPort版本"
+    },
+    "dviPorts": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "description": "DVI接口数量"
+    },
+    "dviType": {
+      "type": "enumeration",
+      "enum": [
+        "dviD",
+        "dviI",
+        "dviA"
+      ],
+      "description": "DVI类型"
+    },
+    "vgaPorts": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "description": "VGA接口数量"
+    },
+    "usbCPorts": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "description": "USB-C接口数量"
+    },
+    "usbCVersion": {
+      "type": "enumeration",
+      "enum": [
+        "usbThreePointOne",
+        "usbThreePointTwo",
+        "usbFour"
+      ],
+      "description": "USB-C版本"
+    },
+    "usbCPowerDelivery": {
+      "type": "integer",
+      "min": 0,
+      "description": "USB-C供电功率(W)"
+    },
+    "usbHubPorts": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "description": "USB集线器接口数量"
+    },
+    "usbHubVersion": {
+      "type": "enumeration",
+      "enum": [
+        "usbTwoPointZero",
+        "usbThreePointZero",
+        "usbThreePointOne",
+        "usbThreePointTwo"
+      ],
+      "description": "USB集线器版本"
+    },
+    "thunderboltPorts": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "description": "Thunderbolt接口数量"
+    },
+    "thunderboltVersion": {
+      "type": "enumeration",
+      "enum": [
+        "thunderboltThree",
+        "thunderboltFour"
+      ],
+      "description": "Thunderbolt版本"
+    },
+    "audioIn": {
+      "type": "boolean",
+      "default": false,
+      "description": "音频输入接口"
+    },
+    "audioOut": {
+      "type": "boolean",
+      "default": false,
+      "description": "音频输出接口"
+    },
+    "ethernetPort": {
+      "type": "boolean",
+      "default": false,
+      "description": "以太网接口"
+    },
+    "wirelessConnectivity": {
+      "type": "boolean",
+      "default": false,
+      "description": "无线连接支持"
+    },
+    "wirelessTypes": {
+      "type": "json",
+      "description": "支持的无线连接类型(WiFi, Bluetooth等)"
+    }
+  }
+}

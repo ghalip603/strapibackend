@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_cooler_pump_specs",
+  "info": {
+    "displayName": "水泵规格",
+    "description": "水冷散热器水泵规格信息"
+  },
+  "options": {},
+  "attributes": {
+    "pumpSpeed": {
+      "type": "string",
+      "description": "水泵转速范围(RPM)"
+    },
+    "flowRate": {
+      "type": "decimal",
+      "min": 0,
+      "description": "流量(L/h)"
+    },
+    "noiseLevel": {
+      "type": "string",
+      "description": "噪音水平(dB)"
+    },
+    "powerConsumption": {
+      "type": "decimal",
+      "min": 0,
+      "description": "功耗(W)"
+    },
+    "mtbf": {
+      "type": "integer",
+      "min": 0,
+      "description": "平均无故障工作时间(小时)"
+    },
+    "controlMethod": {
+      "type": "enumeration",
+      "enum": [
+        "pwm",
+        "dcVoltage",
+        "software",
+        "fixed"
+      ],
+      "description": "控制方式"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "collectionName": "components_case_dimensions",
+  "info": {
+    "displayName": "尺寸规格",
+    "description": "机箱尺寸规格信息"
+  },
+  "options": {},
+  "attributes": {
+    "length": {
+      "type": "integer",
+      "min": 0,
+      "required": true,
+      "description": "长度(mm)"
+    },
+    "width": {
+      "type": "integer",
+      "min": 0,
+      "required": true,
+      "description": "宽度(mm)"
+    },
+    "height": {
+      "type": "integer",
+      "min": 0,
+      "required": true,
+      "description": "高度(mm)"
+    },
+    "weight": {
+      "type": "decimal",
+      "min": 0,
+      "description": "重量(kg)"
+    },
+    "volume": {
+      "type": "decimal",
+      "min": 0,
+      "description": "容积(L)"
+    },
+    "maxGpuLength": {
+      "type": "integer",
+      "min": 0,
+      "description": "最大显卡长度(mm)"
+    },
+    "maxCpuCoolerHeight": {
+      "type": "integer",
+      "min": 0,
+      "description": "最大CPU散热器高度(mm)"
+    },
+    "maxPsuLength": {
+      "type": "integer",
+      "min": 0,
+      "description": "最大电源长度(mm)"
+    },
+    "cableManagementSpace": {
+      "type": "integer",
+      "min": 0,
+      "description": "背板走线空间(mm)"
+    }
+  }
+}

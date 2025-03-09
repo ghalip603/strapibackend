@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_memory_compatibilities",
+  "info": {
+    "displayName": "Compatibility",
+    "icon": "check-circle",
+    "description": "内存兼容性配置"
+  },
+  "options": {},
+  "attributes": {
+    "intel_support": {
+      "type": "component",
+      "component": "memory.platform-support",
+      "required": true,
+      "description": "Intel平台支持"
+    },
+    "amd_support": {
+      "type": "component",
+      "component": "memory.platform-support",
+      "required": true,
+      "description": "AMD平台支持"
+    },
+    "qvl_list": {
+      "type": "json",
+      "description": "主板QVL列表"
+    },
+    "form_factor": {
+      "type": "enumeration",
+      "enum": [
+        "DIMM",
+        "SO_DIMM"
+      ],
+      "required": true,
+      "description": "内存条规格"
+    },
+    "pin_count": {
+      "type": "integer",
+      "required": true,
+      "description": "针脚数"
+    }
+  }
+} 

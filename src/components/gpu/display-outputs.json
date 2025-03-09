@@ -1,0 +1,70 @@
+{
+  "collectionName": "components_gpu_display_outputs",
+  "info": {
+    "displayName": "显示输出",
+    "description": "GPU显示输出接口"
+  },
+  "options": {},
+  "attributes": {
+    "hdmi": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "default": 0,
+      "description": "HDMI接口数量"
+    },
+    "hdmiVersion": {
+      "type": "enumeration",
+      "enum": [
+        "HDMItwoPointZero",
+        "HDMItwoPointOne",
+        "HDMItwoPointOneA"
+      ],
+      "description": "HDMI接口版本"
+    },
+    "displayPort": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "default": 0,
+      "description": "DisplayPort接口数量"
+    },
+    "displayPortVersion": {
+      "type": "enumeration",
+      "enum": [
+        "DisplayPortOnePointFour",
+        "DisplayPortOnePointFourA",
+        "DisplayPortTwoPointZero",
+        "DisplayPortTwoPointOne"
+      ],
+      "description": "DisplayPort接口版本"
+    },
+    "vga": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "description": "VGA接口数量"
+    },
+    "dvi": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "description": "DVI接口数量"
+    },
+    "usbc": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "description": "USB-C接口数量"
+    },
+    "maxResolution": {
+      "type": "string",
+      "description": "最大分辨率支持"
+    },
+    "maxRefreshRate": {
+      "type": "integer",
+      "min": 0,
+      "description": "最大刷新率(Hz)"
+    }
+  }
+}

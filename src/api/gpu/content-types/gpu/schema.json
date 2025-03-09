@@ -1,0 +1,179 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gpus",
+  "info": {
+    "singularName": "gpu",
+    "pluralName": "gpus",
+    "displayName": "GPU",
+    "description": "高性能显卡信息"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "model": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "显卡型号"
+    },
+    "brand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::brand.brand",
+      "inversedBy": "gpus"
+    },
+    "series": {
+      "type": "enumeration",
+      "enum": [
+        "GeForceRTX40",
+        "GeForceRTX30",
+        "GeForceRTX20",
+        "GeForceGTX16",
+        "GeForceGTX10",
+        "RadeonRX7000",
+        "RadeonRX6000",
+        "RadeonRX5000",
+        "ArcA",
+        "Other"
+      ],
+      "required": true,
+      "description": "显卡系列"
+    },
+    "marketSegment": {
+      "type": "enumeration",
+      "enum": [
+        "entry",
+        "mainstream",
+        "highend",
+        "flagship",
+        "professional"
+      ],
+      "required": true,
+      "description": "市场定位"
+    },
+    "coreSpecs": {
+      "type": "component",
+      "component": "gpu.core-specs",
+      "required": true
+    },
+    "memorySpecs": {
+      "type": "component",
+      "component": "gpu.memory-specs",
+      "required": true
+    },
+    "powerThermal": {
+      "type": "component",
+      "component": "gpu.power-thermal",
+      "required": true
+    },
+    "displayOutputs": {
+      "type": "component",
+      "component": "gpu.display-outputs",
+      "required": true
+    },
+    "featuresSupport": {
+      "type": "component",
+      "component": "gpu.features-support",
+      "required": true
+    },
+    "physicalSpecs": {
+      "type": "component",
+      "component": "gpu.physical-specs",
+      "required": true
+    },
+    "interfaceType": {
+      "type": "enumeration",
+      "enum": [
+        "PCIExpress4",
+        "PCIExpress5",
+        "PCIExpress3"
+      ],
+      "required": true,
+      "description": "接口类型"
+    },
+    "releaseDate": {
+      "type": "date",
+      "required": true,
+      "description": "发布日期"
+    },
+    "price": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "description": "建议零售价(元)"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "inStock",
+        "discontinued",
+        "comingSoon"
+      ],
+      "default": "inStock",
+      "required": true,
+      "description": "产品状态"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "description": "产品图片"
+    },
+    "description": {
+      "type": "richtext",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "description": "产品描述"
+    },
+    "benchmarks": {
+      "type": "json",
+      "description": "性能基准测试数据"
+    },
+    "warranty": {
+      "type": "component",
+      "component": "common.warranty-info",
+      "required": true
+    },
+    "compatibleWith": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::motherboard.motherboard",
+      "description": "兼容的主板型号"
+    },
+    "compatibleMonitors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::monitor.monitor",
+      "mappedBy": "compatibleWith",
+      "description": "兼容的显示器型号"
+    }
+  }
+}

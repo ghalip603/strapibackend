@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_ports_usb_port_groups",
+  "info": {
+    "displayName": "USB Port Group",
+    "icon": "plug",
+    "description": "USB端口组"
+  },
+  "options": {},
+  "attributes": {
+    "usb_2_0": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "description": "USB 2.0端口数量"
+    },
+    "usb_3_2_gen1": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "description": "USB 3.2 Gen1端口数量(5Gbps)"
+    },
+    "usb_3_2_gen2": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "description": "USB 3.2 Gen2端口数量(10Gbps)"
+    },
+    "usb_3_2_gen2x2": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "description": "USB 3.2 Gen2x2端口数量(20Gbps)"
+    },
+    "usb_4_0": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "description": "USB 4.0端口数量(40Gbps)"
+    },
+    "type_c_count": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "description": "Type-C接口数量"
+    }
+  }
+} 

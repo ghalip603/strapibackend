@@ -1,0 +1,131 @@
+{
+  "kind": "collectionType",
+  "collectionName": "monitors",
+  "info": {
+    "singularName": "monitor",
+    "pluralName": "monitors",
+    "displayName": "monitor",
+    "description": "显示器产品信息"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "显示器名称"
+    },
+    "model": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "显示器型号"
+    },
+    "brand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::brand.brand",
+      "inversedBy": "monitors"
+    },
+    "displayPanel": {
+      "type": "component",
+      "repeatable": false,
+      "component": "monitor.display-panel",
+      "required": true
+    },
+    "colorPerformance": {
+      "type": "component",
+      "repeatable": false,
+      "component": "monitor.color-performance"
+    },
+    "connectivity": {
+      "type": "component",
+      "repeatable": false,
+      "component": "monitor.connectivity",
+      "required": true
+    },
+    "physicalSpecs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "monitor.physical-specs",
+      "required": true
+    },
+    "features": {
+      "type": "component",
+      "repeatable": false,
+      "component": "monitor.features"
+    },
+    "powerSpecs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "monitor.power-specs"
+    },
+    "usage": {
+      "type": "enumeration",
+      "enum": [
+        "gaming",
+        "professional",
+        "business",
+        "general",
+        "multimedia",
+        "ultrawide",
+        "portable"
+      ],
+      "description": "主要用途"
+    },
+    "releaseDate": {
+      "type": "date",
+      "description": "发布日期"
+    },
+    "price": {
+      "type": "decimal",
+      "min": 0,
+      "description": "价格"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "inStock",
+        "discontinued",
+        "comingSoon"
+      ],
+      "default": "inStock",
+      "required": true,
+      "description": "产品状态"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ],
+      "description": "产品图片"
+    },
+    "description": {
+      "type": "richtext",
+      "description": "产品描述"
+    },
+    "warranty": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.warranty-info"
+    },
+    "compatibleWith": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::gpu.gpu",
+      "inversedBy": "compatibleMonitors"
+    },
+    "accessories": {
+      "type": "json",
+      "description": "包装附件(线缆、遮光罩等)"
+    },
+    "certifications": {
+      "type": "json",
+      "description": "认证(VESA DisplayHDR, TUV等)"
+    }
+  }
+}

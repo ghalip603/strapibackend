@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_common_contact_infos",
+  "info": {
+    "displayName": "Contact Information",
+    "icon": "address-book",
+    "description": "联系方式信息"
+  },
+  "options": {},
+  "attributes": {
+    "phone": {
+      "type": "string",
+      "description": "电话号码"
+    },
+    "email": {
+      "type": "email",
+      "description": "电子邮箱"
+    },
+    "website": {
+      "type": "string",
+      "description": "网站地址"
+    },
+    "service_hours": {
+      "type": "text",
+      "description": "服务时间"
+    },
+    "additional_info": {
+      "type": "text",
+      "description": "其他联系信息"
+    }
+  }
+} 

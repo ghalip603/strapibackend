@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_specs_storage_interfaces",
+  "info": {
+    "displayName": "Storage Interfaces",
+    "icon": "database",
+    "description": "主板存储接口配置"
+  },
+  "options": {},
+  "attributes": {
+    "m2_slots": {
+      "type": "component",
+      "component": "storage.m2-slot",
+      "required": true,
+      "repeatable": true,
+      "description": "M.2接口配置"
+    },
+    "sata_ports": {
+      "type": "component",
+      "component": "storage.sata-port",
+      "required": true,
+      "description": "SATA接口配置"
+    }
+  }
+}

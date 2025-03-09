@@ -1,0 +1,65 @@
+{
+  "collectionName": "components_power_supply_connector_specs",
+  "info": {
+    "displayName": "接口规格",
+    "description": "电源接口规格信息"
+  },
+  "options": {},
+  "attributes": {
+    "mainConnector": {
+      "type": "enumeration",
+      "enum": [
+        "twentyFourPin",
+        "twentyPlusFourPin",
+        "twentyPin"
+      ],
+      "required": true,
+      "description": "主板电源接口"
+    },
+    "eps": {
+      "type": "enumeration",
+      "enum": [
+        "fourPlusFourPin",
+        "eightPin",
+        "fourPlusFourPinAndEightPin",
+        "eightPlusFourPin",
+        "eightPluseightPin"
+      ],
+      "required": true,
+      "description": "CPU电源接口"
+    },
+    "pciE": {
+      "type": "enumeration",
+      "enum": [
+        "sixPlusTwoPin",
+        "eightPin",
+        "sixPin",
+        "sixteenPin"
+      ],
+      "required": true,
+      "description": "PCI-E显卡电源接口"
+    },
+    "pciECount": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "description": "PCI-E接口数量"
+    },
+    "sata": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "description": "SATA接口数量"
+    },
+    "molex": {
+      "type": "integer",
+      "min": 0,
+      "description": "大四针(Molex)接口数量"
+    },
+    "floppy": {
+      "type": "integer",
+      "min": 0,
+      "description": "软驱接口数量"
+    }
+  }
+}

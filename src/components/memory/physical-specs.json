@@ -1,0 +1,55 @@
+{
+  "collectionName": "components_memory_physical_specs",
+  "info": {
+    "displayName": "Physical Specifications",
+    "icon": "ruler",
+    "description": "内存条物理规格"
+  },
+  "options": {},
+  "attributes": {
+    "height": {
+      "type": "decimal",
+      "required": true,
+      "description": "高度(mm)"
+    },
+    "color": {
+      "type": "string",
+      "required": true,
+      "description": "颜色"
+    },
+    "heatsink": {
+      "type": "boolean",
+      "default": true,
+      "required": true,
+      "description": "是否带散热片"
+    },
+    "heatsink_material": {
+      "type": "enumeration",
+      "enum": [
+        "Aluminum",
+        "Copper",
+        "Hybrid",
+        "None"
+      ],
+      "description": "散热片材质"
+    },
+    "heatsink_design": {
+      "type": "text",
+      "description": "散热片设计特点"
+    },
+    "weight": {
+      "type": "decimal",
+      "description": "重量(g)"
+    },
+    "dimensions": {
+      "type": "component",
+      "component": "common.dimensions",
+      "required": true,
+      "description": "尺寸规格"
+    },
+    "special_features": {
+      "type": "json",
+      "description": "特殊物理特性"
+    }
+  }
+} 

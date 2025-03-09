@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_gpu_memory_specs",
+  "info": {
+    "displayName": "显存规格",
+    "description": "GPU显存规格信息"
+  },
+  "options": {},
+  "attributes": {
+    "capacity": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "description": "显存容量(GB)"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "GDDR6",
+        "GDDR6X",
+        "GDDR5",
+        "GDDR5X",
+        "HBMtwo",
+        "HBMtwoe",
+        "HBMthree"
+      ],
+      "required": true,
+      "description": "显存类型"
+    },
+    "busWidth": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "description": "显存位宽(bit)"
+    },
+    "bandwidth": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "description": "显存带宽(GB/s)"
+    },
+    "clockSpeed": {
+      "type": "decimal",
+      "min": 0,
+      "description": "显存频率(MHz)"
+    },
+    "effectiveClockSpeed": {
+      "type": "decimal",
+      "min": 0,
+      "description": "显存有效频率(MHz)"
+    }
+  }
+}

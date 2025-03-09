@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_specs_expansion_slots",
+  "info": {
+    "displayName": "Expansion Slots",
+    "icon": "plug",
+    "description": "主板扩展插槽配置"
+  },
+  "options": {},
+  "attributes": {
+    "pcie_x16_slots": {
+      "type": "component",
+      "component": "slots.pcie-slot",
+      "required": true,
+      "repeatable": true,
+      "description": "PCIe x16插槽配置"
+    },
+    "pcie_x8_slots": {
+      "type": "component",
+      "component": "slots.pcie-slot",
+      "repeatable": true,
+      "description": "PCIe x8插槽配置"
+    },
+    "pcie_x4_slots": {
+      "type": "component",
+      "component": "slots.pcie-slot",
+      "repeatable": true,
+      "description": "PCIe x4插槽配置"
+    },
+    "pcie_x1_slots": {
+      "type": "component",
+      "component": "slots.pcie-slot",
+      "repeatable": true,
+      "description": "PCIe x1插槽配置"
+    },
+    "multi_gpu_support": {
+      "type": "enumeration",
+      "enum": [
+        "NVIDIA_SLI",
+        "AMD_CrossFireX",
+        "Both",
+        "None"
+      ],
+      "description": "多显卡支持"
+    },
+    "additional_info": {
+      "type": "text",
+      "description": "其他扩展槽相关信息"
+    }
+  }
+} 

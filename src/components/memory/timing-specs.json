@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_memory_timing_specs",
+  "info": {
+    "displayName": "Timing Specifications",
+    "icon": "clock",
+    "description": "内存时序规格"
+  },
+  "options": {},
+  "attributes": {
+    "cas_latency": {
+      "type": "integer",
+      "required": true,
+      "description": "CAS延迟(CL)"
+    },
+    "ras_to_cas": {
+      "type": "integer",
+      "required": true,
+      "description": "RAS to CAS延迟(tRCD)"
+    },
+    "ras_precharge": {
+      "type": "integer",
+      "required": true,
+      "description": "RAS预充电时间(tRP)"
+    },
+    "active_to_precharge": {
+      "type": "integer",
+      "required": true,
+      "description": "行活动时间(tRAS)"
+    },
+    "command_rate": {
+      "type": "enumeration",
+      "enum": [
+        "1T",
+        "2T"
+      ],
+      "required": true
+    }
+  }
+} 

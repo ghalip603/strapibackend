@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_cooler_mounting_specs",
+  "info": {
+    "displayName": "安装规格",
+    "description": "散热器安装规格信息"
+  },
+  "options": {},
+  "attributes": {
+    "socketSupport": {
+      "type": "json",
+      "required": true,
+      "description": "支持的CPU插槽"
+    },
+    "installationType": {
+      "type": "enumeration",
+      "enum": [
+        "pushPin",
+        "screwMount",
+        "clipOn",
+        "backplate"
+      ],
+      "description": "安装方式"
+    },
+    "dimensions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.dimensions",
+      "description": "散热器尺寸"
+    },
+    "weight": {
+      "type": "decimal",
+      "min": 0,
+      "description": "重量(g)"
+    },
+    "clearanceHeight": {
+      "type": "integer",
+      "min": 0,
+      "description": "散热器高度(mm)"
+    },
+    "ramClearance": {
+      "type": "boolean",
+      "default": true,
+      "description": "内存兼容性"
+    },
+    "vrm": {
+      "type": "boolean",
+      "default": true,
+      "description": "VRM兼容性"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_storage_cache_configs",
+  "info": {
+    "displayName": "Cache Configuration",
+    "icon": "memory",
+    "description": "缓存配置信息"
+  },
+  "options": {},
+  "attributes": {
+    "cache_size": {
+      "type": "integer",
+      "min": 0,
+      "description": "缓存大小(MB)"
+    },
+    "cache_type": {
+      "type": "enumeration",
+      "enum": [
+        "DDR4",
+        "DDR3",
+        "LPDDR4",
+        "None"
+      ],
+      "required": true,
+      "description": "缓存类型"
+    }
+  }
+} 

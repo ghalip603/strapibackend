@@ -1,0 +1,151 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cases",
+  "info": {
+    "singularName": "case",
+    "pluralName": "cases",
+    "displayName": "case",
+    "description": "机箱信息"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "机箱名称"
+    },
+    "model": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "机箱型号"
+    },
+    "brand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::brand.brand",
+      "inversedBy": "cases"
+    },
+    "formFactor": {
+      "type": "enumeration",
+      "enum": [
+        "fullTower",
+        "midTower",
+        "miniTower",
+        "sffpc",
+        "htpc",
+        "desktop",
+        "cube",
+        "slim"
+      ],
+      "required": true,
+      "description": "机箱类型"
+    },
+    "motherboardSupport": {
+      "type": "enumeration",
+      "enum": [
+        "eatx",
+        "atx",
+        "microAtx",
+        "miniItx",
+        "ssiEeb",
+        "ssiCeb"
+      ],
+      "required": true,
+      "description": "主板支持类型"
+    },
+    "dimensions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "case.dimensions",
+      "required": true
+    },
+    "expansionSlots": {
+      "type": "component",
+      "repeatable": false,
+      "component": "case.expansion-slots",
+      "required": true
+    },
+    "coolingSystem": {
+      "type": "component",
+      "repeatable": false,
+      "component": "case.cooling-system"
+    },
+    "ioPorts": {
+      "type": "component",
+      "repeatable": false,
+      "component": "case.io-ports"
+    },
+    "materialSpecs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "case.material-specs"
+    },
+    "color": {
+      "type": "string",
+      "description": "颜色"
+    },
+    "rgbLighting": {
+      "type": "boolean",
+      "default": false,
+      "description": "RGB灯效"
+    },
+    "psuShroud": {
+      "type": "boolean",
+      "default": false,
+      "description": "电源仓遮挡"
+    },
+    "tempered": {
+      "type": "boolean",
+      "default": false,
+      "description": "钢化玻璃"
+    },
+    "compatiblePowerSupplies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::power-supply.power-supply",
+      "mappedBy": "compatibleWith"
+    },
+    "warranty": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.warranty-info"
+    },
+    "releaseDate": {
+      "type": "date",
+      "description": "发布日期"
+    },
+    "price": {
+      "type": "decimal",
+      "min": 0,
+      "description": "价格"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "inStock",
+        "discontinued",
+        "comingSoon"
+      ],
+      "default": "inStock",
+      "required": true,
+      "description": "产品状态"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ],
+      "description": "产品图片"
+    },
+    "description": {
+      "type": "richtext",
+      "description": "产品描述"
+    }
+  }
+}

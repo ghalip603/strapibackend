@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_specs_bios_features",
+  "info": {
+    "displayName": "BIOS Features",
+    "icon": "microchip",
+    "description": "主板BIOS功能配置"
+  },
+  "options": {},
+  "attributes": {
+    "bios_type": {
+      "type": "enumeration",
+      "enum": [
+        "UEFI",
+        "UEFI_LEGACY"
+      ],
+      "required": true,
+      "description": "BIOS类型"
+    },
+    "flash_size": {
+      "type": "string",
+      "required": true,
+      "description": "BIOS芯片容量"
+    },
+    "features": {
+      "type": "component",
+      "component": "bios.feature-set",
+      "required": true,
+      "description": "BIOS功能集"
+    },
+    "update_methods": {
+      "type": "component",
+      "component": "bios.update-methods",
+      "required": true,
+      "description": "BIOS更新方式"
+    }
+  }
+} 

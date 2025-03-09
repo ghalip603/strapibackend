@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_power_power_connectors",
+  "info": {
+    "displayName": "Power Connectors",
+    "icon": "plug",
+    "description": "主板电源接口配置"
+  },
+  "options": {},
+  "attributes": {
+    "main_power": {
+      "type": "enumeration",
+      "enum": [
+        "24_PIN",
+        "20_PIN"
+      ],
+      "required": true,
+      "description": "主电源接口"
+    },
+    "cpu_power": {
+      "type": "enumeration",
+      "enum": [
+        "8_PIN",
+        "8_4_PIN",
+        "8_8_PIN",
+        "8_8_4_PIN"
+      ],
+      "required": true,
+      "description": "CPU电源接口"
+    },
+    "additional_power": {
+      "type": "string",
+      "description": "额外供电接口"
+    },
+    "pcie_power": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否有PCIe供电接口"
+    }
+  }
+} 

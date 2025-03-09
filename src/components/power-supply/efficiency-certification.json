@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_power_supply_efficiency_certifications",
+  "info": {
+    "displayName": "效率认证",
+    "description": "电源效率认证信息"
+  },
+  "options": {},
+  "attributes": {
+    "standard": {
+      "type": "enumeration",
+      "enum": [
+        "eightyPlusBronze",
+        "eightyPlusSilver",
+        "eightyPlusGold",
+        "eightyPlusPlatinum",
+        "eightyPlusTitanium",
+        "none"
+      ],
+      "required": true,
+      "description": "电源效率认证标准"
+    },
+    "efficiency20Load": {
+      "type": "decimal",
+      "min": 0,
+      "max": 100,
+      "description": "20%负载下的效率(%)"
+    },
+    "efficiency50Load": {
+      "type": "decimal",
+      "min": 0,
+      "max": 100,
+      "description": "50%负载下的效率(%)"
+    },
+    "efficiency100Load": {
+      "type": "decimal",
+      "min": 0,
+      "max": 100,
+      "description": "100%负载下的效率(%)"
+    }
+  }
+}

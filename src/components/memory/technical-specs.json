@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_memory_technical_specs",
+  "info": {
+    "displayName": "Technical Specifications",
+    "icon": "microchip",
+    "description": "内存技术规格"
+  },
+  "options": {},
+  "attributes": {
+    "memory_chips": {
+      "type": "enumeration",
+      "enum": [
+        "Samsung_B_Die",
+        "Samsung_A_Die",
+        "Samsung_M_Die",
+        "Micron_B_Die",
+        "Micron_E_Die",
+        "Hynix_CJR",
+        "Hynix_DJR",
+        "Hynix_MJR",
+        "Other"
+      ],
+      "description": "内存颗粒"
+    },
+    "rank_type": {
+      "type": "enumeration",
+      "enum": [
+        "Single_Rank",
+        "Dual_Rank",
+        "Quad_Rank"
+      ],
+      "required": true,
+      "description": "列数(Rank)"
+    },
+    "ecc_support": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否支持ECC"
+    },
+    "on_die_ecc": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否支持片上ECC(仅DDR5)"
+    },
+    "pmic": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否带有电源管理芯片(仅DDR5)"
+    }
+  }
+} 

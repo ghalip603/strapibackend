@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_memory_performance_specs",
+  "info": {
+    "displayName": "Performance Specifications",
+    "icon": "tachometer-alt",
+    "description": "内存性能规格"
+  },
+  "options": {},
+  "attributes": {
+    "base_frequency": {
+      "type": "integer",
+      "required": true,
+      "description": "基础频率(MHz)"
+    },
+    "tested_frequency": {
+      "type": "integer",
+      "required": true,
+      "description": "测试频率(MHz)"
+    },
+    "xmp_expo_profiles": {
+      "type": "component",
+      "component": "memory.overclock-profile",
+      "repeatable": true,
+      "required": true,
+      "description": "XMP/EXPO配置文件"
+    },
+    "timing": {
+      "type": "component",
+      "component": "memory.timing-specs",
+      "required": true
+    },
+    "voltage": {
+      "type": "decimal",
+      "required": true,
+      "description": "工作电压(V)"
+    }
+  }
+} 

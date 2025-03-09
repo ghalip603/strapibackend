@@ -1,0 +1,59 @@
+{
+  "collectionName": "components_case_cooling_systems",
+  "info": {
+    "displayName": "散热系统",
+    "description": "机箱散热系统信息"
+  },
+  "options": {},
+  "attributes": {
+    "frontFanSupport": {
+      "type": "string",
+      "description": "前置风扇支持规格"
+    },
+    "topFanSupport": {
+      "type": "string",
+      "description": "顶置风扇支持规格"
+    },
+    "rearFanSupport": {
+      "type": "string",
+      "description": "后置风扇支持规格"
+    },
+    "bottomFanSupport": {
+      "type": "string",
+      "description": "底部风扇支持规格"
+    },
+    "sideFanSupport": {
+      "type": "string",
+      "description": "侧面风扇支持规格"
+    },
+    "includedFans": {
+      "type": "string",
+      "description": "附带风扇规格"
+    },
+    "frontRadiatorSupport": {
+      "type": "string",
+      "description": "前置水冷排支持规格"
+    },
+    "topRadiatorSupport": {
+      "type": "string",
+      "description": "顶置水冷排支持规格"
+    },
+    "rearRadiatorSupport": {
+      "type": "string",
+      "description": "后置水冷排支持规格"
+    },
+    "sideRadiatorSupport": {
+      "type": "string",
+      "description": "侧面水冷排支持规格"
+    },
+    "bottomRadiatorSupport": {
+      "type": "string",
+      "description": "底部水冷排支持规格"
+    },
+    "fanController": {
+      "type": "boolean",
+      "default": false,
+      "description": "内置风扇控制器"
+    }
+  }
+}

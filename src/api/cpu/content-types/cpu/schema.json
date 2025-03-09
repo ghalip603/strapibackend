@@ -1,0 +1,219 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cpus",
+  "info": {
+    "singularName": "cpu",
+    "pluralName": "cpus",
+    "displayName": "CPU",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "brand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::brand.brand",
+      "inversedBy": "cpus"
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "CpuSeries": {
+      "type": "enumeration",
+      "enum": [
+        "酷睿i3",
+        "酷睿i5",
+        "酷睿i7",
+        "酷睿i9",
+        "Ultra3",
+        "Ultra5",
+        "Ultra7",
+        "Ultra9",
+        "AM4",
+        "AM5"
+      ],
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Manufacturing": {
+      "type": "enumeration",
+      "enum": [
+        "Intel 14nm",
+        "Intel 10nm",
+        "Intel 7",
+        "Intel 4",
+        "Intel 3"
+      ],
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "is_having_cooler": {
+      "type": "boolean",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "CPUsocket": {
+      "type": "enumeration",
+      "enum": [
+        "LGA 1200",
+        "LGA 1151",
+        "LGA 1700",
+        "LGA 1851",
+        "LGA 2011",
+        "AM4",
+        "AM5"
+      ],
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "is_integrated_graphics": {
+      "type": "boolean",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "L2Cache": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "MainFrequency": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "BoostFrequency": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "L3Cache": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "CpuImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Price": {
+      "type": "biginteger",
+      "required": true,
+      "unique": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "releaseDate": {
+      "type": "date",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "marketSegment": {
+      "type": "enumeration",
+      "enum": [
+        "entry",
+        "mainstream",
+        "high_end",
+        "extreme"
+      ],
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "description": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "specifications": {
+      "type": "json",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "compatibleCoolers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::cooler.cooler",
+      "mappedBy": "compatibleWith"
+    }
+  }
+}

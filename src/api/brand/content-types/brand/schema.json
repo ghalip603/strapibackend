@@ -1,0 +1,100 @@
+{
+  "kind": "collectionType",
+  "collectionName": "brands",
+  "info": {
+    "singularName": "brand",
+    "pluralName": "brands",
+    "displayName": "Brand",
+    "description": "品牌信息"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "description": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "motherboard_products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::motherboard.motherboard",
+      "mappedBy": "brand"
+    },
+    "cpus": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cpu.cpu",
+      "mappedBy": "brand"
+    },
+    "memory_products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::memory.memory",
+      "mappedBy": "brand"
+    },
+    "storage_products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::storage.storage",
+      "mappedBy": "brand"
+    },
+    "gpus": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gpu.gpu",
+      "mappedBy": "brand"
+    },
+    "powerSupplies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::power-supply.power-supply",
+      "mappedBy": "brand"
+    },
+    "cases": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::case.case",
+      "mappedBy": "brand"
+    },
+    "coolers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cooler.cooler",
+      "mappedBy": "brand"
+    },
+    "monitors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::monitor.monitor",
+      "mappedBy": "brand"
+    }
+  }
+}

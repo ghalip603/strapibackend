@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_memory_capacity_configs",
+  "info": {
+    "displayName": "Capacity Configuration",
+    "icon": "database",
+    "description": "内存容量配置"
+  },
+  "options": {},
+  "attributes": {
+    "single_capacity": {
+      "type": "integer",
+      "required": true,
+      "description": "单条容量(GB)"
+    },
+    "kit_capacity": {
+      "type": "integer",
+      "required": true,
+      "description": "套装总容量(GB)"
+    },
+    "kit_configuration": {
+      "type": "enumeration",
+      "enum": [
+        "Single",
+        "2x4GB",
+        "2x8GB",
+        "2x16GB",
+        "2x32GB",
+        "4x4GB",
+        "4x8GB",
+        "4x16GB",
+        "4x32GB"
+      ],
+      "required": true,
+      "description": "套装配置"
+    }
+  }
+} 

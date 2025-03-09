@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_specs_network_features",
+  "info": {
+    "displayName": "Network Features",
+    "icon": "wifi",
+    "description": "主板网络功能配置"
+  },
+  "options": {},
+  "attributes": {
+    "lan_ports": {
+      "type": "component",
+      "component": "network.ethernet-port",
+      "required": true,
+      "repeatable": true,
+      "description": "有线网络端口"
+    },
+    "wifi": {
+      "type": "component",
+      "component": "network.wifi-module",
+      "description": "无线网络模块"
+    },
+    "bluetooth": {
+      "type": "component",
+      "component": "network.bluetooth-module",
+      "description": "蓝牙模块"
+    }
+  }
+} 

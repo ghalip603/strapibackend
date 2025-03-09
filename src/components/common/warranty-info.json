@@ -1,0 +1,62 @@
+{
+  "collectionName": "components_common_warranty_infos",
+  "info": {
+    "displayName": "Warranty Information",
+    "icon": "shield-alt",
+    "description": "产品保修信息"
+  },
+  "options": {},
+  "attributes": {
+    "warranty_period": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "description": "保修期限(月)"
+    },
+    "warranty_type": {
+      "type": "enumeration",
+      "enum": [
+        "Limited_Lifetime",
+        "Standard",
+        "Extended",
+        "None"
+      ],
+      "required": true,
+      "description": "保修类型"
+    },
+    "service_type": {
+      "type": "enumeration",
+      "enum": [
+        "On_Site",
+        "Return_to_Manufacturer",
+        "Authorized_Service_Center",
+        "Replacement_Only"
+      ],
+      "required": true,
+      "description": "服务方式"
+    },
+    "registration_required": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否需要注册"
+    },
+    "transferable": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否可转让"
+    },
+    "coverage": {
+      "type": "json",
+      "description": "保修范围"
+    },
+    "support_contact": {
+      "type": "component",
+      "component": "common.contact-info",
+      "description": "售后支持联系方式"
+    },
+    "terms_conditions": {
+      "type": "text",
+      "description": "保修条款和条件"
+    }
+  }
+}

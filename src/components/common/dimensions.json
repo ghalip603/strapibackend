@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_common_dimensions",
+  "info": {
+    "displayName": "Dimensions",
+    "icon": "ruler-combined",
+    "description": "产品尺寸规格"
+  },
+  "options": {},
+  "attributes": {
+    "length": {
+      "type": "decimal",
+      "required": true,
+      "description": "长度(mm)"
+    },
+    "width": {
+      "type": "decimal",
+      "required": true,
+      "description": "宽度(mm)"
+    },
+    "height": {
+      "type": "decimal",
+      "required": true,
+      "description": "高度(mm)"
+    },
+    "special_features": {
+      "type": "json",
+      "description": "特殊物理特性"
+    }
+  }
+} 

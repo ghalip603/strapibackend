@@ -1,0 +1,100 @@
+{
+  "collectionName": "components_monitor_features",
+  "info": {
+    "displayName": "功能特性",
+    "description": "显示器附加功能和特性"
+  },
+  "options": {},
+  "attributes": {
+    "speakers": {
+      "type": "boolean",
+      "default": false,
+      "description": "内置扬声器"
+    },
+    "speakerPower": {
+      "type": "string",
+      "description": "扬声器功率"
+    },
+    "microphone": {
+      "type": "boolean",
+      "default": false,
+      "description": "内置麦克风"
+    },
+    "webcam": {
+      "type": "boolean",
+      "default": false,
+      "description": "内置摄像头"
+    },
+    "webcamResolution": {
+      "type": "string",
+      "description": "摄像头分辨率"
+    },
+    "kvm": {
+      "type": "boolean",
+      "default": false,
+      "description": "KVM切换功能"
+    },
+    "picInPic": {
+      "type": "boolean",
+      "default": false,
+      "description": "画中画(PIP)功能"
+    },
+    "picByPic": {
+      "type": "boolean",
+      "default": false,
+      "description": "分屏显示(PBP)功能"
+    },
+    "multipleInputs": {
+      "type": "integer",
+      "min": 0,
+      "description": "多输入源支持数量"
+    },
+    "ambientLightSensor": {
+      "type": "boolean",
+      "default": false,
+      "description": "环境光传感器"
+    },
+    "proximityDetection": {
+      "type": "boolean",
+      "default": false,
+      "description": "人体接近检测"
+    },
+    "eyeCareTechnology": {
+      "type": "boolean",
+      "default": false,
+      "description": "护眼技术"
+    },
+    "gameMode": {
+      "type": "boolean",
+      "default": false,
+      "description": "游戏模式"
+    },
+    "picturePresets": {
+      "type": "json",
+      "description": "预设显示模式(电影/游戏/阅读等)"
+    },
+    "osd": {
+      "type": "boolean",
+      "default": true,
+      "description": "屏幕显示菜单"
+    },
+    "osdLanguages": {
+      "type": "json",
+      "description": "OSD支持语言"
+    },
+    "softwareSupport": {
+      "type": "json",
+      "description": "配套软件支持"
+    },
+    "rgbLighting": {
+      "type": "boolean",
+      "default": false,
+      "description": "RGB灯效"
+    },
+    "ambientLighting": {
+      "type": "boolean",
+      "default": false,
+      "description": "环境氛围灯"
+    }
+  }
+}

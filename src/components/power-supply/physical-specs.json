@@ -1,0 +1,62 @@
+{
+  "collectionName": "components_power_supply_physical_specs",
+  "info": {
+    "displayName": "物理规格",
+    "description": "电源物理规格信息"
+  },
+  "options": {},
+  "attributes": {
+    "formFactor": {
+      "type": "enumeration",
+      "enum": [
+        "atx",
+        "sfx",
+        "tfx",
+        "flexAtx",
+        "eatx",
+        "ps2",
+        "sffLtx"
+      ],
+      "required": true,
+      "description": "电源规格"
+    },
+    "length": {
+      "type": "integer",
+      "min": 0,
+      "description": "长度(mm)"
+    },
+    "width": {
+      "type": "integer",
+      "min": 0,
+      "description": "宽度(mm)"
+    },
+    "height": {
+      "type": "integer",
+      "min": 0,
+      "description": "高度(mm)"
+    },
+    "weight": {
+      "type": "decimal",
+      "min": 0,
+      "description": "重量(kg)"
+    },
+    "color": {
+      "type": "string",
+      "description": "颜色"
+    },
+    "cableManagement": {
+      "type": "enumeration",
+      "enum": [
+        "fixed",
+        "semiModular",
+        "fullyModular"
+      ],
+      "required": true,
+      "description": "线缆管理类型"
+    },
+    "cableLength": {
+      "type": "string",
+      "description": "线缆长度信息"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "collectionName": "components_power_supply_output_specs",
+  "info": {
+    "displayName": "输出规格",
+    "description": "电源输出规格信息"
+  },
+  "options": {},
+  "attributes": {
+    "maxPower": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "description": "最大输出功率(W)"
+    },
+    "continuousPower": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "description": "持续输出功率(W)"
+    },
+    "plusTwelveV": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "description": "+12V输出电流(A)"
+    },
+    "plusTwelveVRails": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "default": 1,
+      "description": "+12V导轨数量"
+    },
+    "plusFiveV": {
+      "type": "decimal",
+      "min": 0,
+      "description": "+5V输出电流(A)"
+    },
+    "plusThreePointThreeV": {
+      "type": "decimal",
+      "min": 0,
+      "description": "+3.3V输出电流(A)"
+    },
+    "minusTwelveV": {
+      "type": "decimal",
+      "min": 0,
+      "description": "-12V输出电流(A)"
+    },
+    "plusFiveVSB": {
+      "type": "decimal",
+      "min": 0,
+      "description": "+5VSB输出电流(A)"
+    },
+    "dcOutput": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否支持DC输出"
+    }
+  }
+}

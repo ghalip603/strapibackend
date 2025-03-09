@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_storage_sata_ports",
+  "info": {
+    "displayName": "SATA Port",
+    "icon": "hdd",
+    "description": "SATA接口配置"
+  },
+  "options": {},
+  "attributes": {
+    "sata_3_ports": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "description": "SATA 6Gb/s端口数量"
+    },
+    "raid_support": {
+      "type": "enumeration",
+      "enum": [
+        "RAID_0",
+        "RAID_1",
+        "RAID_5",
+        "RAID_10",
+        "None"
+      ],
+      "description": "RAID支持类型"
+    },
+    "port_multiplier": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否支持端口倍增器"
+    }
+  }
+} 

@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_case_material_specs",
+  "info": {
+    "displayName": "材质规格",
+    "description": "机箱材质规格信息"
+  },
+  "options": {},
+  "attributes": {
+    "sidePanelMaterial": {
+      "type": "enumeration",
+      "enum": [
+        "steel",
+        "aluminum",
+        "temperedGlass",
+        "acrylic",
+        "mesh"
+      ],
+      "description": "侧板材质"
+    },
+    "frontPanelMaterial": {
+      "type": "enumeration",
+      "enum": [
+        "steel",
+        "aluminum",
+        "temperedGlass",
+        "acrylic",
+        "mesh",
+        "plastic"
+      ],
+      "description": "前面板材质"
+    },
+    "frameMaterial": {
+      "type": "enumeration",
+      "enum": [
+        "steel",
+        "aluminum",
+        "plastic"
+      ],
+      "description": "框架材质"
+    },
+    "dustFilters": {
+      "type": "boolean",
+      "default": false,
+      "description": "防尘滤网"
+    }
+  }
+}

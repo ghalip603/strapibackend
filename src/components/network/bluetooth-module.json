@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_network_bluetooth_modules",
+  "info": {
+    "displayName": "Bluetooth Module",
+    "icon": "bluetooth",
+    "description": "蓝牙模块规格"
+  },
+  "options": {},
+  "attributes": {
+    "version": {
+      "type": "enumeration",
+      "enum": [
+        "BT_5_3",
+        "BT_5_2",
+        "BT_5_1",
+        "BT_5_0",
+        "BT_4_2",
+        "None"
+      ],
+      "required": true,
+      "description": "蓝牙版本"
+    },
+    "chip_model": {
+      "type": "string",
+      "description": "蓝牙芯片型号"
+    },
+    "features": {
+      "type": "json",
+      "description": "特殊功能支持"
+    },
+    "max_devices": {
+      "type": "integer",
+      "min": 0,
+      "description": "最大连接设备数"
+    },
+    "low_energy": {
+      "type": "boolean",
+      "default": true,
+      "description": "是否支持低功耗模式"
+    }
+  }
+} 

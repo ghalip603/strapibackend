@@ -1,0 +1,4 @@
+/* 覆盖 Strapi 后台 Logo 的圆形样式 */
+img[alt="brand-logo"] {
+  border-radius: 0 !important;
+}

@@ -1,0 +1,92 @@
+{
+  "kind": "collectionType",
+  "collectionName": "storages",
+  "info": {
+    "singularName": "storage",
+    "pluralName": "storages",
+    "displayName": "Storage",
+    "description": "硬盘/固态硬盘数据模型"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "brand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::brand.brand",
+      "inversedBy": "storage_products"
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "model": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "series": {
+      "type": "string",
+      "required": true,
+      "description": "产品系列"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "SSD_NVMe",
+        "SSD_SATA",
+        "HDD_SATA"
+      ],
+      "required": true,
+      "description": "存储设备类型"
+    },
+    "basic_info": {
+      "type": "component",
+      "component": "storage.basic-info",
+      "required": true
+    },
+    "performance": {
+      "type": "component",
+      "component": "storage.performance-specs",
+      "required": true
+    },
+    "warranty": {
+      "type": "component",
+      "component": "common.warranty-info",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+} 

@@ -1,0 +1,55 @@
+{
+  "collectionName": "components_specs_rgb_headers",
+  "info": {
+    "displayName": "RGB Headers",
+    "icon": "lightbulb",
+    "description": "主板RGB/ARGB接口配置"
+  },
+  "options": {},
+  "attributes": {
+    "argb_headers": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "required": true,
+      "description": "5V ARGB接口数量(3针)"
+    },
+    "rgb_headers": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "required": true,
+      "description": "12V RGB接口数量(4针)"
+    },
+    "rgb_software": {
+      "type": "enumeration",
+      "enum": [
+        "ASUS_Aura_Sync",
+        "MSI_Mystic_Light",
+        "Gigabyte_RGB_Fusion",
+        "ASRock_Polychrome_Sync",
+        "Other"
+      ],
+      "description": "RGB控制软件"
+    },
+    "max_power_per_port": {
+      "type": "integer",
+      "min": 0,
+      "description": "每个接口最大功率(W)"
+    },
+    "sync_features": {
+      "type": "boolean",
+      "default": true,
+      "description": "是否支持同步控制"
+    },
+    "onboard_led": {
+      "type": "boolean",
+      "default": false,
+      "description": "是否有板载LED"
+    },
+    "additional_features": {
+      "type": "json",
+      "description": "其他RGB相关特性"
+    }
+  }
+} 

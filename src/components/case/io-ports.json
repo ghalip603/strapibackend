@@ -1,0 +1,60 @@
+{
+  "collectionName": "components_case_io_ports",
+  "info": {
+    "displayName": "IO接口",
+    "description": "机箱前置IO接口信息"
+  },
+  "options": {},
+  "attributes": {
+    "usbThreePointTwo": {
+      "type": "integer",
+      "min": 0,
+      "description": "USB 3.2接口数量"
+    },
+    "usbThreePointOne": {
+      "type": "integer",
+      "min": 0,
+      "description": "USB 3.1接口数量"
+    },
+    "usbThreePointZero": {
+      "type": "integer",
+      "min": 0,
+      "description": "USB 3.0接口数量"
+    },
+    "usbTwoPointZero": {
+      "type": "integer",
+      "min": 0,
+      "description": "USB 2.0接口数量"
+    },
+    "usbTypeC": {
+      "type": "integer",
+      "min": 0,
+      "description": "USB Type-C接口数量"
+    },
+    "audioJack": {
+      "type": "boolean",
+      "default": false,
+      "description": "音频接口"
+    },
+    "microphoneJack": {
+      "type": "boolean",
+      "default": false,
+      "description": "麦克风接口"
+    },
+    "sdCardReader": {
+      "type": "boolean",
+      "default": false,
+      "description": "SD卡读卡器"
+    },
+    "fanController": {
+      "type": "boolean",
+      "default": false,
+      "description": "风扇控制按钮"
+    },
+    "rgbController": {
+      "type": "boolean",
+      "default": false,
+      "description": "RGB控制按钮"
+    }
+  }
+}

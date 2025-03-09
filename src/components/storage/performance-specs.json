@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_storage_performance_specs",
+  "info": {
+    "displayName": "Performance Specifications",
+    "icon": "tachometer-alt",
+    "description": "存储设备性能规格"
+  },
+  "options": {},
+  "attributes": {
+    "sequential_read": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "description": "连续读取速度(MB/s)"
+    },
+    "sequential_write": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "description": "连续写入速度(MB/s)"
+    },
+    "random_read_iops": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "description": "随机读取IOPS"
+    },
+    "random_write_iops": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "description": "随机写入IOPS"
+    },
+    "endurance": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "description": "耐久度(TBW)"
+    },
+    "mtbf": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "description": "平均无故障时间(小时)"
+    },
+    "power_consumption": {
+      "type": "component",
+      "component": "storage.power-specs",
+      "required": true
+    }
+  }
+} 

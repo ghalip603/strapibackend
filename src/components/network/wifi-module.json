@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_network_wifi_modules",
+  "info": {
+    "displayName": "WiFi Module",
+    "icon": "wifi",
+    "description": "WiFi模块规格"
+  },
+  "options": {},
+  "attributes": {
+    "version": {
+      "type": "enumeration",
+      "enum": [
+        "WiFi_6E",
+        "WiFi_6",
+        "WiFi_5",
+        "None"
+      ],
+      "required": true,
+      "description": "WiFi版本"
+    },
+    "chip_model": {
+      "type": "string",
+      "description": "WiFi芯片型号"
+    },
+    "antenna_included": {
+      "type": "boolean",
+      "default": true,
+      "description": "是否包含天线"
+    },
+    "bands": {
+      "type": "enumeration",
+      "enum": [
+        "Dual_Band",
+        "Tri_Band",
+        "None"
+      ],
+      "required": true,
+      "description": "频段支持"
+    },
+    "max_speed": {
+      "type": "string",
+      "description": "最大速率"
+    },
+    "features": {
+      "type": "json",
+      "description": "其他WiFi特性"
+    }
+  }
+} 

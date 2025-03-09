@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_specs_usb_ports",
+  "info": {
+    "displayName": "USB Ports",
+    "icon": "usb",
+    "description": "主板USB接口配置"
+  },
+  "options": {},
+  "attributes": {
+    "rear_ports": {
+      "type": "component",
+      "component": "ports.usb-port-group",
+      "required": true,
+      "description": "后置USB接口"
+    },
+    "internal_headers": {
+      "type": "component",
+      "component": "ports.usb-port-group",
+      "required": true,
+      "description": "内部USB接口"
+    },
+    "type_c_features": {
+      "type": "component",
+      "component": "ports.type-c-features",
+      "description": "Type-C特性"
+    }
+  }
+} 

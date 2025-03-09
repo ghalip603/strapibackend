@@ -1,0 +1,227 @@
+{
+  "kind": "collectionType",
+  "collectionName": "motherboards",
+  "info": {
+    "singularName": "motherboard",
+    "pluralName": "motherboards",
+    "displayName": "Motherboard",
+    "description": "计算机主板数据模型"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "brand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::brand.brand",
+      "inversedBy": "motherboard_products"
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "model": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "manufacturer": {
+      "type": "enumeration",
+      "enum": [
+        "ASUS",
+        "GIGABYTE",
+        "MSI",
+        "ASRock",
+        "BIOSTAR",
+        "EVGA",
+        "Colorful",
+        "Maxsun"
+      ],
+      "required": true
+    },
+    "productLine": {
+      "type": "enumeration",
+      "enum": [
+        "ROG_MAXIMUS",
+        "ROG_STRIX",
+        "TUF_GAMING",
+        "PRIME",
+        "ProArt",
+        "WORKSTATION",
+        "AORUS_XTREME",
+        "AORUS_MASTER",
+        "AORUS_PRO",
+        "AORUS_ELITE",
+        "GAMING_X",
+        "UD_PRO",
+        "UD",
+        "MEG",
+        "MPG",
+        "MAG",
+        "PRO",
+        "Taichi",
+        "Phantom_Gaming",
+        "Steel_Legend",
+        "PRO_RS",
+        "PG_RIPTIDE",
+        "RACING",
+        "GAMING",
+        "PRO_GAMING",
+        "CVN",
+        "BATTLE_AX",
+        "ICRAFT",
+        "GAMING_PRO",
+        "OTHER"
+      ],
+      "required": true
+    },
+    "subSeries": {
+      "type": "string",
+      "description": "用于记录产品子系列或具体型号中的系列部分"
+    },
+    "marketSegment": {
+      "type": "enumeration",
+      "enum": [
+        "entry",
+        "mainstream",
+        "high_end",
+        "extreme"
+      ],
+      "required": true
+    },
+    "chipset": {
+      "type": "enumeration",
+      "enum": [
+        "Z790",
+        "Z690",
+        "B760",
+        "B660",
+        "H770",
+        "H670",
+        "X670E",
+        "X670",
+        "B650E",
+        "B650",
+        "A620"
+      ],
+      "required": true
+    },
+    "cpuSocket": {
+      "type": "enumeration",
+      "enum": [
+        "LGA1700",
+        "LGA1851",
+        "AM5",
+        "AM4"
+      ],
+      "required": true
+    },
+    "formFactor": {
+      "type": "enumeration",
+      "enum": [
+        "ATX",
+        "Micro_ATX",
+        "Mini_ITX",
+        "Extended_ATX"
+      ],
+      "required": true
+    },
+    "memorySpec": {
+      "displayName": "内存规格",
+      "type": "component",
+      "component": "specs.memory-specification",
+      "required": true
+    },
+    "storageInterfaces": {
+      "displayName": "存储接口",
+      "type": "component",
+      "component": "specs.storage-interfaces",
+      "required": true
+    },
+    "expansionSlots": {
+      "displayName": "扩展插槽",
+      "type": "component",
+      "component": "specs.expansion-slots",
+      "required": true
+    },
+    "networkFeatures": {
+      "displayName": "网络功能",
+      "type": "component",
+      "component": "specs.network-features",
+      "required": true
+    },
+    "audioSolution": {
+      "type": "string",
+      "required": true
+    },
+    "usbPorts": {
+      "displayName": "USB接口",
+      "type": "component",
+      "component": "specs.usb-ports",
+      "required": true
+    },
+    "powerDesign": {
+      "displayName": "供电设计",
+      "type": "component",
+      "component": "specs.power-design",
+      "required": true
+    },
+    "features": {
+      "type": "json",
+      "required": true
+    },
+    "bios": {
+      "type": "component",
+      "component": "specs.bios-features",
+      "required": true
+    },
+    "dimensions": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "decimal"
+    },
+    "price": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "releaseDate": {
+      "type": "date"
+    },
+    "description": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "rgb_headers": {
+      "type": "component",
+      "component": "specs.rgb-headers",
+      "required": true,
+      "description": "RGB/ARGB接口配置"
+    }
+  }
+}

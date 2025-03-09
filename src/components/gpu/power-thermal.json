@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_gpu_power_thermal",
+  "info": {
+    "displayName": "功耗与散热",
+    "description": "GPU功耗与散热规格"
+  },
+  "options": {},
+  "attributes": {
+    "tdp": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "description": "热设计功耗(W)"
+    },
+    "recommendedPsu": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "description": "推荐电源功率(W)"
+    },
+    "powerConnectors": {
+      "type": "enumeration",
+      "enum": [
+        "eightPin",
+        "sixPin",
+        "eightPinPlusEightPin",
+        "eightPinPlusSixPin",
+        "sixteenPin",
+        "noExternalPower"
+      ],
+      "required": true,
+      "description": "电源接口类型"
+    },
+    "coolingSystem": {
+      "type": "enumeration",
+      "enum": [
+        "dualFan",
+        "tripleFan",
+        "singleFan",
+        "waterCooling",
+        "hybridCooling",
+        "passiveCooling"
+      ],
+      "required": true,
+      "description": "散热系统类型"
+    },
+    "maxTemperature": {
+      "type": "integer",
+      "min": 0,
+      "description": "最高工作温度(°C)"
+    }
+  }
+}

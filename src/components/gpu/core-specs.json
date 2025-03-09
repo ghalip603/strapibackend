@@ -1,0 +1,62 @@
+{
+  "collectionName": "components_gpu_core_specs",
+  "info": {
+    "displayName": "核心规格",
+    "description": "GPU核心规格信息"
+  },
+  "options": {},
+  "attributes": {
+    "coreCount": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "description": "CUDA核心/流处理器数量"
+    },
+    "coreClock": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "description": "核心频率(MHz)"
+    },
+    "boostClock": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "description": "加速频率(MHz)"
+    },
+    "architecture": {
+      "type": "string",
+      "required": true,
+      "description": "GPU架构，如Ampere, Ada Lovelace, RDNA 3等"
+    },
+    "process": {
+      "type": "enumeration",
+      "enum": [
+        "TSMCfournm",
+        "TSMCfivenm",
+        "TSMCsevennm",
+        "TSMCtwelvenm",
+        "Samsungeightnm",
+        "Samsungtennm",
+        "Other"
+      ],
+      "required": true,
+      "description": "制程工艺"
+    },
+    "tensorCores": {
+      "type": "integer",
+      "min": 0,
+      "description": "Tensor核心数量(NVIDIA专用)"
+    },
+    "rtCores": {
+      "type": "integer",
+      "min": 0,
+      "description": "RT核心数量(NVIDIA专用)"
+    },
+    "computeUnits": {
+      "type": "integer",
+      "min": 0,
+      "description": "计算单元数量(AMD专用)"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "collectionName": "components_bios_feature_sets",
+  "info": {
+    "displayName": "BIOS Feature Set",
+    "icon": "list",
+    "description": "BIOS功能集合"
+  },
+  "options": {},
+  "attributes": {
+    "secure_boot": {
+      "type": "boolean",
+      "default": true,
+      "description": "安全启动支持"
+    },
+    "ez_mode": {
+      "type": "boolean",
+      "default": true,
+      "description": "简易模式界面"
+    },
+    "fan_control": {
+      "type": "boolean",
+      "default": true,
+      "description": "风扇控制"
+    },
+    "rgb_control": {
+      "type": "boolean",
+      "default": false,
+      "description": "RGB灯光控制"
+    },
+    "overclocking_support": {
+      "type": "boolean",
+      "default": true,
+      "description": "超频支持"
+    },
+    "memory_oc": {
+      "type": "boolean",
+      "default": true,
+      "description": "内存超频支持"
+    },
+    "gui_interface": {
+      "type": "boolean",
+      "default": true,
+      "description": "图形界面"
+    },
+    "mouse_support": {
+      "type": "boolean",
+      "default": true,
+      "description": "鼠标支持"
+    },
+    "language_support": {
+      "type": "json",
+      "description": "支持的语言列表"
+    },
+    "additional_features": {
+      "type": "json",
+      "description": "其他BIOS特性"
+    }
+  }
+} 

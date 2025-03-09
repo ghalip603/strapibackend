@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_memory_overclock_profiles",
+  "info": {
+    "displayName": "Overclock Profile",
+    "icon": "bolt",
+    "description": "XMP/EXPO配置文件"
+  },
+  "options": {},
+  "attributes": {
+    "profile_type": {
+      "type": "enumeration",
+      "enum": [
+        "XMP",
+        "EXPO"
+      ],
+      "required": true
+    },
+    "profile_name": {
+      "type": "string",
+      "required": true
+    },
+    "frequency": {
+      "type": "integer",
+      "required": true,
+      "description": "配置频率(MHz)"
+    },
+    "timing": {
+      "type": "component",
+      "component": "memory.timing-specs",
+      "required": true
+    },
+    "voltage": {
+      "type": "decimal",
+      "required": true,
+      "description": "配置电压(V)"
+    }
+  }
+} 

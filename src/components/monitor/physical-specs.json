@@ -1,0 +1,112 @@
+{
+  "collectionName": "components_monitor_physical_specs",
+  "info": {
+    "displayName": "物理特性",
+    "description": "显示器物理尺寸和外观规格"
+  },
+  "options": {},
+  "attributes": {
+    "screenSize": {
+      "type": "decimal",
+      "min": 0,
+      "required": true,
+      "description": "屏幕尺寸(英寸)"
+    },
+    "dimensions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.dimensions",
+      "description": "显示器尺寸(宽x高x深)"
+    },
+    "weight": {
+      "type": "decimal",
+      "min": 0,
+      "description": "重量(kg)"
+    },
+    "bezelWidth": {
+      "type": "enumeration",
+      "enum": [
+        "ultraThin",
+        "thin",
+        "standard",
+        "thick"
+      ],
+      "description": "边框宽度"
+    },
+    "bezelMeasurements": {
+      "type": "json",
+      "description": "边框尺寸(上/下/左/右, mm)"
+    },
+    "vesa": {
+      "type": "boolean",
+      "default": false,
+      "description": "VESA安装支持"
+    },
+    "vesaSize": {
+      "type": "enumeration",
+      "enum": [
+        "seventyFive",
+        "oneHundred",
+        "twoHundred",
+        "fourHundred",
+        "custom"
+      ],
+      "description": "VESA尺寸(mm)"
+    },
+    "customVesaSize": {
+      "type": "string",
+      "description": "自定义VESA尺寸"
+    },
+    "standAdjustments": {
+      "type": "json",
+      "description": "支架调节功能(高度/倾斜/旋转/转向)"
+    },
+    "heightAdjustment": {
+      "type": "integer",
+      "min": 0,
+      "description": "高度调节范围(mm)"
+    },
+    "tiltRange": {
+      "type": "string",
+      "description": "倾斜角度范围"
+    },
+    "swivel": {
+      "type": "string",
+      "description": "水平旋转角度范围"
+    },
+    "pivot": {
+      "type": "boolean",
+      "default": false,
+      "description": "垂直旋转(纵向模式)"
+    },
+    "detachableStand": {
+      "type": "boolean",
+      "default": true,
+      "description": "可拆卸支架"
+    },
+    "cableManagement": {
+      "type": "boolean",
+      "default": false,
+      "description": "线缆管理系统"
+    },
+    "colorFinish": {
+      "type": "string",
+      "description": "外观颜色/材质"
+    },
+    "frontControls": {
+      "type": "boolean",
+      "default": false,
+      "description": "前置控制按钮/旋钮"
+    },
+    "controlType": {
+      "type": "enumeration",
+      "enum": [
+        "buttons",
+        "joystick",
+        "touchSensitive",
+        "remote"
+      ],
+      "description": "控制方式"
+    }
+  }
+}
